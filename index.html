@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html lang="es">
-<meta charset="UTF-8" />
+<meta charset="utf-8" />
 <head>
 	<title>Chatmamesero: comunidad de chamameros unidos!</title>
+	<link rel="stylesheet" href="normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/chat.css">
-
 </head>
 <body>
 	 <header>
-		<div class="logo">
+		<div class="logo left">
 			<img src="imagenes/logo.png" alt="Chatmameseros">
 		</div>
 		<div class="titular">
@@ -16,11 +16,11 @@
 				Chatmamesero, comunidad del chamame!
 			</h1>
 			<div>
-				<a class="filtro">
-					
+				<a class="filtro" href="#">
+					Responsible
 				</a>
-				<a class="publicar">
-					
+				<a class="publicar" href="#">
+					Publicar
 				</a>
 			</div>
 		</div>
@@ -29,14 +29,44 @@
 				<img src="imagenes/avatar.jpg" alt="Valo">
 
 			</figure>
-			<a class="flechita" href="#"></a>
+			<a class="flechita" href="#">X</a>
 		</div>
 	 </header>
 	 <nav>
-		
+		<ul class="menu">
+			<li><a href="#">Chamamé</a></li>
+			<li><a href="#">Guarania</a></li>
+			<li><a href="#">Pólca</a></li>
+			<li><a href="#">Samba</a></li>	
+		</ul>
 	 </nav>
-	 <section>
-		
+	 <section class="posts">
+		 <article class="post">
+		 	<div class="descripcion">
+				<figure class="imagen">
+					<img src="imagenes/foto.jpg">
+				</figure>
+				<div class="detalles">
+					<h2 class="titulo">Concierto de Chamamé en Asunción</h2>
+					<p class="autor">Por <a href="#">Víctor Vallovera</a></p>
+					<a class="tag">Chamamé</a>
+					<p class="fecha">hace <strong>20 </strong>min.</p>
+				</div>
+		 	</div>
+		 	<div class="acciones">
+		 		<div class="votos">
+		 			<a class="up" href="#">U</a>
+		 			<span class="total">152</span>
+		 			<a class="donw" href="#">D</a>
+		 		</div>
+		 		<div class="datos">
+		 			<a class="comentarios" href="#">10</a>
+		 			<a class="estrellitas">*</a>
+		 		</div>
+
+		 	</div>
+		 </article>
+			
 	 </section>
 	 <footer>
 	 <h3 class="powered">
