@@ -1,16 +1,15 @@
-gris_oscuro = #454545
-gris_texto = #003399
-amarillo = #f8c93a
-azul = #3399ff
+azul = #22BCE0
 naranja = #DD4F24
+gris_texto = #7A7A7A
+gris_oscuro = #444
 
 @font-face {
 	font-family: 'iconitos';
-	src:url('../fonts/icomoon.eot?adlm4x');
-	src:url('../fonts/icomoon.eot?#iefixadlm4x') format('embedded-opentype'),
-		url('../fonts/icomoon.woff?adlm4x') format('woff'),
-		url('../fonts/icomoon.ttf?adlm4x') format('truetype'),
-		url('../fonts/icomoon.svg?adlm4x#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot');
+	src:url('../fonts/icomoon.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf') format('truetype'),
+		url('../fonts/icomoon.woff') format('woff'),
+		url('../fonts/icomoon.svg#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -23,10 +22,9 @@ body
 	color gris_oscuro
 	font-family Arial
 	font-size 16px
-	transition font-size 1s 
 
 footer
-	background azul
+	background naranja
 	color rgba(white,0.5)
 	padding 1em 0
 	text-align center
@@ -37,22 +35,13 @@ footer
 		font-weight normal
 
 		strong
-			display block
+			display block 
 
 		.mejor
 			&:before
 			&:after
 				content " - "
 
-form 
-	padding 0.8em
-	display none
-	
-
-	label
-		display inline-block
-		width 60px
-				 
 header
 	background gris_oscuro
 	box-shadow 0 5px 0 rgba(0,0,0,0.2)
@@ -60,86 +49,95 @@ header
 	overflow hidden
 	padding 0.5em
 	position relative
-	z-index 1
+	z-index 2
 
 	.logo
-		width 60px
-		border-right 1px solid amarillo 
+		border-right 1px solid azul
 		float left
+		width 60px
 
 		img
 			width 52px
 
-
 	.titular
-		margin 0 60px 0 70px
-		.titulo
-			font-size 18px
-			font-weight normal
-			margin 0
-			padding 0
+		margin 0 80px 0 70px
 
 		.filtro
 			color azul
 			font-size 14px
-			font-weight bold
 			font-style italic
+			font-weight bold
 			text-decoration none
 
 		.publicar
 			background naranja
 			color white
 			float right
-			text-decoration none
 			font-style italic
-			margin -3px 1em 0 0
 			padding 0.2em 0.5em
+			text-decoration none
 			text-shadow 1px 1px 0px black
-			border-radius 10px 
 
 			&:before
-				display inline-block
 				content "\e600"
+				display inline-block
 				font-family "iconitos"
 				margin 0 3px 0 0
+				text-shadow none
 
-		.sizer
-			text-decoration none
+		.titulo
+			font-size 18px
+			font-weight normal
+			margin 0
+			padding 0
 
-				
 	.usuario
 		position absolute
-		right 0
-		top 0
+		right 10px
+		top 10px
+
 		.avatar
 			margin 0 1.1em 0 0
 			position relative
-			z-index 2
+			z-index 69
+
 			img
-				width 50px
 				border-radius 50%
+				width 50px
 		.flechita
 			background naranja
 			color white
 			display block
+			padding 2px
 			position absolute
 			right 0
-			padding 2px
-			top 15px
 			text-align right
+			text-decoration none
+			top 15px
 			width 50%
+			z-index 0
+
+			&:after
+				content "\e602"
+				display block
+				font-family "iconitos"
+				margin 1px 0 0 1px
+				text-shadow 1px 1px 0px black
+
 nav
 	background azul
 	border-left 15px solid white
 	position relative
+
 	&:before
 		border-bottom 20px solid transparent
 		border-left 7px solid white
 		border-top 20px solid transparent
 		content ""
-		left 0
+		left 0px
 		position absolute
 		top 0
+
 	.menu
 		height 40px
 		line-height 40px
@@ -148,14 +146,21 @@ nav
 		overflow-x auto
 		white-space nowrap
 
+		&::-webkit-scrollbar
+			display none
+
 		li
 			display inline-block
-			a 
+
+			a
 				color white
 				display block
 				margin 0 0.5em
 				padding 0 0.2em
 				text-decoration none
+
+				&:hover
+					background rgba(black,0.1)
 
 .posts
 	padding 0.5em
@@ -163,9 +168,9 @@ nav
 	.post
 		background white
 		border-radius 0 0 0.5em 0.5em
-		color gris_texto
 		box-shadow 2px 2px 10px rgba(black, 0.5)
-		margin-bottom 1em
+		color gris_texto
+		margin-bottom 0.5em
 
 		.acciones
 			border-top 3px solid azul
@@ -179,43 +184,44 @@ nav
 					background gris_oscuro
 					border-radius 3px
 					color white
-					padding 2px 5px 
 					margin 0 1em 0 0
+					padding 2px 5px
 					text-decoration none
 
-			    .estrellita
+				.estrellita
 					text-decoration none
 
 					&:after
+						color #FCB92D
+						content "\e601"
 						font-family "iconitos"
-						color #E0D561
-						content "\e601" 
-				
+						font-size 1.1em
+
 			.votos
 				float left
 
 				.down
-				.up 
+				.up
 					text-decoration none
-
+					&:before
+						font-family "iconitos"
+						font-size 1.5em
+						vertical-align middle
 				.down
 					color red
 					&:before
-						font-family "iconitos"
-						font-size 1em
 						content "\e602"
-						vertical-align bottom
 
 				.up
 					color green
 					&:before
-						font-family "iconitos"
-						font-size 1em
 						content "\e603"
-						vertical-align bottom
 
 		.descripcion
-			color blue
+			&.extended
+				.detalles
+					height auto
+					padding-bottom 20px
 
 			.detalles
 				height 160px
@@ -230,18 +236,17 @@ nav
 
 				.tag
 					background azul
-					border-radius 0.5em 
+					border-radius 0.5em
 					color white
 					padding 0.2em 0.5em
 					text-decoration none
 
 				.titulo
 					color gris_oscuro
-					font-size 1.1em
+					font-size 18px
 					font-style italic
 					margin 0
-					padding 0
-
+					padding 0.5em 0.5em 0 0
 
 			.imagen
 				float left
@@ -249,23 +254,24 @@ nav
 				img
 					height 160px
 					vertical-align top
-					width 120px	
+					width 120px
 
 @media screen and (min-width: 768px)
 
 	header
 		.titular
 			.publicar
+				font-size 1.1em
 				padding-left 3em
 				position relative
-				
+
 				&:before
-					left 0px
+					left 0
 					font-size 2.5em
 					position absolute
 					top -10px
 
-	.posts 
+	.posts
 		.post
 			display inline-block
 			width 48%
